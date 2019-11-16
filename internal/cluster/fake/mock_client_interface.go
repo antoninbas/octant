@@ -6,7 +6,7 @@ package fake
 
 import (
 	gomock "github.com/golang/mock/gomock"
-	cluster "github.com/vmware-tanzu/octant/internal/cluster"
+	cluster "github.com/vmware/octant/internal/cluster"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	discovery "k8s.io/client-go/discovery"
 	dynamic "k8s.io/client-go/dynamic"

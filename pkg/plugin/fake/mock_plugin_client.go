@@ -7,7 +7,7 @@ package fake
 import (
 	context "context"
 	gomock "github.com/golang/mock/gomock"
-	dashboard "github.com/vmware-tanzu/octant/pkg/plugin/dashboard"
+	dashboard "github.com/vmware/octant/pkg/plugin/dashboard"
 	grpc "google.golang.org/grpc"
 	reflect "reflect"
 )

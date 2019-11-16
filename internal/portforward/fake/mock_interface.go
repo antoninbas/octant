@@ -7,7 +7,7 @@ package fake
 import (
 	context "context"
 	gomock "github.com/golang/mock/gomock"
-	portforward "github.com/vmware-tanzu/octant/internal/portforward"
+	portforward "github.com/vmware/octant/internal/portforward"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	reflect "reflect"
 )
@@ -80,10 +80,10 @@ func (mr *MockPortForwarderMockRecorder) Create(ctx, gvk, name, namespace, remot
 }
 
 // Find mocks base method
-func (m *MockPortForwarder) Find(namespace string, gvk schema.GroupVersionKind, name string) ([]portforward.State, error) {
+func (m *MockPortForwarder) Find(namespace string, gvk schema.GroupVersionKind, name string) (portforward.State, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Find", namespace, gvk, name)
-	ret0, _ := ret[0].([]portforward.State)
+	ret0, _ := ret[0].(portforward.State)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
